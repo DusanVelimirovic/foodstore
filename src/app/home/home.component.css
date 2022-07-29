@@ -8,8 +8,8 @@ ul {
 
 }
 
-li a {
-    height: 20rem;
+ul li a {
+    height: 40rem;
     width: 20rem;
     border: 1px solid whitesmoke;
     border-radius: 1rem;
