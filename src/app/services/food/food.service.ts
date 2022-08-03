@@ -1,12 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Food } from 'src/app/shared/models/Food';
-
+import { Tag } from 'src/app/shared/models/Tag';
 @Injectable({
   providedIn: 'root'
 })
 export class FoodService {
 
   constructor() { }
+
+  getAllTags(): Tag[] {
+    return [
+      { name: 'All', count: 14 },
+      { name: 'FastFood', count: 4 },
+      { name: 'Lunch', count: 2 },
+      { name: 'SlowFood', count: 4 },
+    ];
+  }
 
   //food tag
   getAllFoodsByTag(tag: string): Food[] {
