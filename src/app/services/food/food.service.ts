@@ -8,6 +8,15 @@ export class FoodService {
 
   constructor() { }
 
+  //food tag
+  getAllFoodsByTag(tag: string): Food[] {
+
+    return tag == "All" ?
+      this.getAll() :
+      this.getAll().filter(food => food.tags?.includes(tag));
+
+  }
+
   //costum function to return array of food images
   getAll(): Food[] {
     return [
